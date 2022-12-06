@@ -29,9 +29,9 @@ const NasaPhoto = () => {
     <>
     <NavBar />
 
-    <div>
+    <div className="nasa-photo">
       {photoData.media_type === 'image' ? (
-      <img src={photoData.url} alt={photoData.title} />
+      <img src={photoData.url} alt={photoData.title} className='photo' />
       ) : (
         <iframe
         title="space-video"
@@ -46,8 +46,8 @@ const NasaPhoto = () => {
 
       <div>
         <h1>{photoData.title}</h1>
-        <p>{photoData.data}</p>
-        <p>{photoData.explanation}</p>
+        <p className="date">{photoData.date}</p>
+        <p className="explanation">{photoData.explanation}</p>
 
       </div>
     </div>
